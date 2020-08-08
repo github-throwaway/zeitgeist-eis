@@ -1,7 +1,5 @@
 from facebook_scraper import get_posts
-#from datetime import date, datetime, time
 import datetime
-from babel.dates import format_date, format_datetime, format_time
 import locale
 
 locale.setlocale(locale.LC_TIME, "de_DE")
