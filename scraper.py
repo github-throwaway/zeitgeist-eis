@@ -49,6 +49,7 @@ else:
     for i, x in enumerate(post_text):
         post_text[i] = re.split('und|[,]', x)
 
+    #export csv
     with open(date+'.csv', 'w', newline='') as file:
         writer = csv.writer(file, delimiter=',',)
         # write header and remove entries from list
