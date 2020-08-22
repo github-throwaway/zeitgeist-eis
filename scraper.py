@@ -47,10 +47,10 @@ else:
 
     # split on , & 'und'
     for i, x in enumerate(post_text):
-        post_text[i] = re.split('und|[,]', x)
+        post_text[i] = re.split(' und |[,]', x)
 
-    #export csv
-    with open(date+'.csv', 'w', newline='') as file:
+    # export csv
+    with open('csv/' + date + '.csv', 'w', newline='') as file:
         writer = csv.writer(file, delimiter=',',)
         # write header and remove entries from list
         writer.writerow([*post_text.pop(0), *post_text.pop(1), ])
