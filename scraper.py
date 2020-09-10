@@ -1,5 +1,5 @@
 from facebook_scraper import get_posts
-import datetime
+from datetime import datetime
 import locale
 import re
 import csv
@@ -14,6 +14,9 @@ post = next(get_posts(pagename, pages=1))
 # handle date of post
 # assumption: ice cream flavour are posted the same day
 date = post['time']  # grab date
+# TODO: if the post is from today skip repeated checks
+if date.strftime('%Y-%m-%d') == datetime.today().strftime('%Y-%m-%d'):
+    print("Post is from today")
 date = date.strftime('%A, %d.%m.%Y')  # format datetime object
 
 # get post text (String)
