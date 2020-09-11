@@ -1,62 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Spectrum Project</title>
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="/Users/frankdu/Desktop/website_example/static/index.css"> -->
-  </head>
-  <body>
-    <h1 id="inspired">Inspired by Spectrum Art Masterpiece from Frank</h1>
+<head>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico')}}">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<title>Zeitgeis Eis</title>
+<!--===============================================================================================-->	
+<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+<style>
 
+h3 {
+  font-family: 'Roboto', sans-serif;
+}
 
-<table border="1" class="art">
+h1 {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h1 id="inspired">{{ date }}</h1>
+
+<div class="table100-head" style="overflow-x:auto;">
+<table>
   <tr>
-    <td id="a"></td>
-    <td id="b"></td>
-    <td id="c"></td>
-    <td id="d"></td>
-    <td id="e"></td>
+    <th>Lindenhof</th>
+    <th>Limburgerhof</th>
   </tr>
 
+  {% for lindenhof,limburgerhof in zipped_list %}
+  <tr>
+    <td>{{lindenhof}}</td>
+    <td>{{limburgerhof}}</td>
+  </tr>
+  {% endfor %}
+
 </table>
+</div>
 
+<br>
+<a href="{{ post_url }}" title="Original Post auf Facebook"><h3>Original Post</h3></a>
+<p>{{ raw_text }}</p>
 
-<style media="screen">
-
-#inspired{
-  font-family: 'Dancing Script', cursive;
-  width:50%;
-  text-align:center;
-  margin:auto;
-}
-table{
-  margin-top: 30px;
-  margin:auto;
-}
-td{
-  background-color: black;
-  height: 300px;
-  width: 200px;
-}
-#a{
-background-color:  #FE938C;
-}
-#b{
-  background-color: #E6B89C;
-}
-#c{
-  background-color: #EAD2AC;
-}
-#d{
-  background-color: #9CAFB7;
-}
-#e{
-  background-color: #4281A4;
-}
-
-
-</style>
-
-  </body>
+</body>
 </html>
