@@ -62,10 +62,13 @@ def scrap():
                 for j, y in enumerate(post_text[i]):
                     post_text[i][j] = y.lstrip() # string are imutable
 
+    # remove locations
+    post_text.pop(0)
+    post_text.pop(1)
 
 
     # export csv
-    toCSV(date,post_text)
+    #toCSV(date,post_text)
     return date,post_text,raw_text,post_url
 
 
