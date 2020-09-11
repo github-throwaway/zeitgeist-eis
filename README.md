@@ -1,21 +1,4 @@
 # Zeitgeist Eis
 
-|Lindenhof          |Limburgerhof              |
-|-------------------|--------------------------|
-|Vanille            |Vanille                   |
-| Schokolade        | Schokolade               |
-| Mango (vegan)     | Mango (vegan)            |
-| Joghurt           | Joghurt                  |
-| Erdbeere (vegan)  | Erdbeere (vegan)         |
-| Pekannuss         | Paranuss                 |
-| Kolanuss (vegan)  | Maracuja (vegan)         |
-| Nougat            | Mango-Lassi              |
-| Birne (vegan)     | Honigmelone-Gurke (vegan)|
-| Kürbiskernöl      | Milchreis                |
-| Waldfrucht (vegan)| Apfel (vegan)            |
-| Kokos             | Zimt                     |
-| Joghurt-Cassis    | Pink Grapefruit (vegan)  |
-
-
 Heroku does not offer locales by default. You need to install them via
 `heroku buildpacks:set https://github.com/heroku/heroku-buildpack-locale.git -a yourporject`
